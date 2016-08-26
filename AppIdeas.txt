@@ -1,0 +1,24 @@
+Chris Carlisle
+August 26, 2016
+Application Ideas
+
+
+Perry County App - Highlight Perry county to internal and external customers.
+* Features
+   * List all county and city departments and contact info.
+   * Ability to email county  and city personnel
+   * List of businesses with contact info.
+   * Calendar of events, with notification reminders
+   * List of recreational activities.
+   * Social message board
+   * Pay county fees
+* Purpose
+   * Promote county services and connect them to citizens
+   * Promote county services to potential residents working in surrounding cities.
+   * Promote local businesses and their services
+   * Promote county recreational activities to boost tourism
+* Challenges
+   * Would a webpage be used more, even a mobile formatted page.
+   * Would enough current residents feel the need to download the app
+   * How would visitors and potential residents know about the app
+   * How would info be maintained?
