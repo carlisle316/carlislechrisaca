@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:text="Input"
+        android:hint="Input"
         android:layout_below="@+id/textView"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
@@ -33,20 +33,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Code List"
-        android:id="@+id/textView2"
+        android:text="Results"
+        android:id="@+id/outputText"
         android:layout_below="@+id/editText"
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
         android:layout_marginTop="50dp"
         android:layout_alignRight="@+id/editText"
         android:layout_alignEnd="@+id/editText"
-        android:textSize="36sp" />
+        android:textSize="16sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Codes"
+        android:text="Add"
         android:id="@+id/button"
         android:layout_marginBottom="60dp"
         android:layout_alignParentBottom="true"
