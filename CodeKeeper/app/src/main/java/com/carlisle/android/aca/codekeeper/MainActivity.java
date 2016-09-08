@@ -46,38 +46,38 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-public class CodeKeeper {
+    public class CodeKeeper {
 
-    ArrayList list;
-    String[] codes = { "alpha", "lambda", "gamma", "delta", "zeta" };
+        ArrayList list;
+        String[] codes = { "alpha", "lambda", "gamma", "delta", "zeta" };
 
-    public CodeKeeper(String[] userCodes) {
-        list = new ArrayList();
-        // load built-in codes
-        for (int i = 0; i < codes.length; i++) {
-            addCode(codes[i]);
-        }
-
-        // load user codes
-        for (int j = 0; j < userCodes.length; j++) {
-            addCode(userCodes[j]);
-        }
-
-        // display all the codes
-        for (Iterator iterator = list.iterator(); iterator.hasNext();) {
-            String output = (String) iterator.next();
-            if (output != null){
-                mResultsText.append(output + "\n");
+        public CodeKeeper(String[] userCodes) {
+            list = new ArrayList();
+            // load built-in codes
+            for (int i = 0; i < codes.length; i++) {
+                addCode(codes[i]);
             }
 
-        }
-    }
+            // load user codes
+            for (int j = 0; j < userCodes.length; j++) {
+                addCode(userCodes[j]);
+            }
 
-    private void addCode(String code) {
-        if (!list.contains(code)) {
-            list.add(code);
+            // display all the codes
+            for (Iterator iterator = list.iterator(); iterator.hasNext();) {
+                String output = (String) iterator.next();
+                if (output != null){
+                    mResultsText.append(output + "\n");
+                }
+
+            }
+        }
+
+        private void addCode(String code) {
+            if (!list.contains(code)) {issue
+                list.add(code);
+            }
         }
     }
-}
 }
 

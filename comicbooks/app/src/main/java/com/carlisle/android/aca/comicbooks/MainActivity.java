@@ -2,10 +2,20 @@ package com.carlisle.android.aca.comicbooks;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText mtitle;
+    EditText mcondition;
+    EditText missueNumber;
+    EditText mbasePrice;
+    TextView mValue;
+    Button mcalculate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
