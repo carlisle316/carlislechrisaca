@@ -2,6 +2,7 @@ package com.carlisle.android.aca.comicbooks;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,7 +23,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        HashMap quality = new HashMap()
+        mtitle = (EditText) findViewById(R.id.title);
+        mcondition = (EditText) findViewById(R.id.condition);
+        missueNumber = (EditText) findViewById(R.id.issueNumber);
+        mbasePrice = (EditText) findViewById(R.id.basePrice);
+        mValue = (TextView) findViewById(R.id.outputText);
+        mcalculate = (Button) findViewById(R.id.calculate);
+
+        mcalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        HashMap quality = new HashMap();
 
         float price1 = 3.00F;
         quality.put("mint", price1);
