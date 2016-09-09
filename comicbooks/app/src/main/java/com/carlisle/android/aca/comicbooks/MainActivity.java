@@ -1,5 +1,6 @@
 package com.carlisle.android.aca.comicbooks;
 
+import android.support.annotation.FloatRange;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,10 @@ import android.widget.TextView;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
+
+    Comic[] comix = new Comic[4];
+
+    HashMap quality = new HashMap();
 
     EditText mtitle;
     EditText mcondition;
@@ -33,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         mcalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String getTitle = mtitle.getText().toString();
+                String getCondition = mcondition.getText().toString();
+                String getIssueNumber = missueNumber.getText().toString();
+                Float getBasePrice = Float.parseFloat (mbasePrice.getText().toString());
+
+                comix[3] = new Comic(getTitle, getCondition, getIssueNumber, getBasePrice);
+                comix[3].setPrice( (Float) quality.get(comix[3].condition));
 
             }
         });
@@ -57,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
         float price6 = 0.25F;
         quality.put("poor", price6);
 
-        // set up a collection
-        Comic[] comix = new Comic[3];  // Set up a Comic array that will hold 3 comics
 
         // Add comics to the collection
         comix[0] = new Comic("Amazing Spider-Man", "1A", "very fine", 12_000.00F);
