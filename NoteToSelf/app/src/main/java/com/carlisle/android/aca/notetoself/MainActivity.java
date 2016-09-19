@@ -1,8 +1,11 @@
 package com.carlisle.android.aca.notetoself;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
     private NoteAdapter mNoteAdapter;
 
+    private boolean mSound;
+    private int mAnimOption;
+    private SharedPreferences mPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,17 +63,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        mPrefs = getSharedPreferences("Note to self", MODE_PRIVATE);
+        mSound  = mPrefs.getBoolean("sound", true);
+        mAnimOption = mPrefs.getInt("anim option", SettingsActivity.FAST);
+    }
+
+}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu)
         return true;
-
-
 
     }
 
@@ -80,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -99,7 +114,23 @@ public class MainActivity extends AppCompatActivity {
 
     public class NoteAdapter extends BaseAdapter {
 
+        private JSONSerializer mSerializer;
         List<Note> noteList = new ArrayList<Note>();
+
+        public NoteAdapter(){
+
+            mSerializer = new JSONSerializer("NoteToSelf.json",
+                    MainActivity.this.getApplicationContext());
+
+            try {
+                noteList = mSerializer.load();
+            } catch (Exception e) {
+                noteList = new ArrayList<Note>();
+                Log.e("Error loading notes: ", "", e);
+            }
+
+        }
+
 
         @Override
         public int getCount() {
@@ -170,6 +201,27 @@ public class MainActivity extends AppCompatActivity {
             notifyDataSetChanged();
 
         }
+
+        public void saveNotes(){
+            try{
+                mSerializer.save(noteList);
+
+            }catch(Exception e){
+                Log.e("Error Saving Notes","", e);
+            }
+
+
+        }
+
+        @Override
+        protected void onPause(){
+            super.onPause();
+
+            mNoteAdapter.saveNotes();
+
+        }
+
+
 
     }
     }

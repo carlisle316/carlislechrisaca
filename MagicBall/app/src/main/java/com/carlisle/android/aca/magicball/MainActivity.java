@@ -2,13 +2,12 @@ package com.carlisle.android.aca.magicball;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView answerText = (TextView) findViewById(R.id.textView);
 
-        String[] anArray = new String[20];
+        final String[] anArray = new String[20];
         anArray[0] = "Yep";
         anArray[1] = "You bet";
         anArray[2] = "uh huh";
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         anArray[19] = "Don't count on it";
 
         for (String s : anArray){
-            Log.i("" , s);
+            Log.i("The answer is " , "" + s);
         }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 Random randGenerator = new Random();
                 int ourRandomNumber = randGenerator.nextInt(20);
 
-                TextView.setText("", + ourRandomNumber);
+                answerText.setText(anArray[ourRandomNumber]);
 
             }
         });
