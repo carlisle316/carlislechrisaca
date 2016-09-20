@@ -15,10 +15,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mbutton = new Button();
-    TextView mroll = new TextView();
-
-
+    Button mRoll;
+    TextView mResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +24,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mRoll = (Button) findViewById(R.id.Roll);
+        mResult = (TextView) findViewById(R.id.Result);
+
+        mRoll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Random randGenerator1 = new Random();
+                int ourRandomNumber1 = randGenerator1.nextInt(6);
+                Random randGenerator2 = new Random();
+                int ourRandomNumber2 = randGenerator2.nextInt(6);
+
+              mResult.setText("You rolled " + (ourRandomNumber1 + ourRandomNumber2));
+
+            }
+        });
+
 
         final TextView answerText = (TextView) findViewById(R.id.textView);
 
