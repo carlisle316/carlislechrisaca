@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 Random randGenerator2 = new Random();
                 int ourRandomNumber2 = randGenerator2.nextInt(6);
 
-              mResult.setText("You rolled " + (ourRandomNumber1 + ourRandomNumber2));
+              mResult.setText("You rolled " + (ourRandomNumber1 + ourRandomNumber2 + 2));
 
             }
         });
