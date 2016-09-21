@@ -51,11 +51,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/Result"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_alignBottom="@+id/Roll"
         android:textSize="48sp"
         android:textColor="#ffffff"
-        android:text="Roll"/>
+        android:text="Roll"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="429dp"/>
 
 </RelativeLayout>

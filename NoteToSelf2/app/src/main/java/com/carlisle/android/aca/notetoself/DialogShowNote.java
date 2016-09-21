@@ -20,60 +20,55 @@ public class DialogShowNote extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return super.onCreateDialog(savedInstanceState);
-
         // All the other code goes here
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_show_note, null);
 
-        // Receive a note from the MainActivity
+        TextView txtTitle = (TextView) dialogView.findViewById(R.id.txtTitle);
+
+        TextView txtDescription = (TextView) dialogView.findViewById(R.id.txtDescription);
+
+        txtTitle.setText(mNote.getTitle());
+        txtDescription.setText(mNote.getDescription());
+
+        ImageView ivImportant = (ImageView) dialogView.findViewById(R.id.imageViewImportant);
+
+        ImageView ivTodo = (ImageView) dialogView.findViewById(R.id.imageViewTodo);
+        ImageView ivIdea = (ImageView) dialogView.findViewById(R.id.imageViewIdea);
+
+        if (!mNote.isImportant()) {
+            ivImportant.setVisibility(View.GONE);
+        }
+
+        if (!mNote.isTodo()) {
+            ivTodo.setVisibility(View.GONE);
+        }
+
+        if (!mNote.isIdea()) {
+            ivIdea.setVisibility(View.GONE);
+        }
+
+        Button btnOK = (Button) dialogView.findViewById(R.id.btnOK);
+
+        builder.setView(dialogView).setMessage("Your Note");
+
+        btnOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+
+        return builder.create();
+    }
 
     public void sendNoteSelected(Note noteSelected) {
         mNote = noteSelected;
     }
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-    LayoutInflater inflater = getActivity().getLayoutInflater();
-    View dialogView = inflater.inflate(R.layout.dialog_show_note, null);
-
-    TextView txtTitle = (TextView) dialogView.findViewById(R.id.txtTitle);
-
-    TextView txtDescription = (TextView) dialogView.findViewById(R.id.txtDescription);
-
-    txtTitle.setText(mNote.getTitle());
-    txtDescription.setText(mNote.getDescription());
-
-    ImageView ivImportant = (ImageView) dialogView.findViewById(R.id.imageViewImportant);
-
-    ImageView ivTodo = (ImageView) dialogView.findViewById(R.id.imageViewTodo);
-    ImageView ivIdea = (ImageView) dialogView.findViewById(R.id.imageViewIdea);
-
-    if (!mNote.isImportant()){
-        ivImportant.setVisibility(View.GONE);
-    }
-
-    if (!mNote.isTodo()){
-        ivTodo.setVisibility(View.GONE);
-    }
-
-    if (!mNote.isIdea()){
-        ivIdea.setVisibility(View.GONE);
-    }
-
-    Button btnOK = (Button) dialogView.findViewById(R.id.btnOK);
-
-    builder.setView(dialogView).setMessage("Your Note");
-
-    btnOK.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            dismiss();
-        }
-    });
-
-    return builder.create();
-
 }
-}
+
 
 
