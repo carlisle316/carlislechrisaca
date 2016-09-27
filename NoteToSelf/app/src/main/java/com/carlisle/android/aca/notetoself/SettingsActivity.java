@@ -30,27 +30,25 @@ public class SettingsActivity extends AppCompatActivity {
         mPrefs = getSharedPreferences("Note to Self", MODE_PRIVATE);
         mEditor = mPrefs.edit();
 
-        mSound  = mPrefs.getBoolean("sound", true);
+        mSound = mPrefs.getBoolean("sound", true);
 
         CheckBox checkBoxSound = (CheckBox) findViewById(R.id.checkBoxSound);
 
-        if(mSound){
+        if (mSound) {
             checkBoxSound.setChecked(true);
-        }else{
+        } else {
             checkBoxSound.setChecked(false);
         }
 
-        checkBoxSound.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
-        {
+        checkBoxSound.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(
-                    CompoundButton buttonView, boolean isChecked)
-            {
+                    CompoundButton buttonView, boolean isChecked) {
                 Log.i("sound = ", "" + mSound);
                 Log.i("isChecked = ", "" + isChecked);
 
                 // If mSound is true make it false
                 // If mSound is false make it true
-                mSound = ! mSound;
+                mSound = !mSound;
                 mEditor.putBoolean("sound", mSound);
 
             }
@@ -65,7 +63,7 @@ public class SettingsActivity extends AppCompatActivity {
         radioGroup.clearCheck();
 
 // Which radio button should be selected?
-        switch(mAnimOption){
+        switch (mAnimOption) {
 
             case FAST:
                 radioGroup.check(R.id.radioFast);
@@ -78,6 +76,7 @@ public class SettingsActivity extends AppCompatActivity {
             case NONE:
                 radioGroup.check(R.id.radioNone);
                 break;
+        }
 
             radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
@@ -85,7 +84,7 @@ public class SettingsActivity extends AppCompatActivity {
                     RadioButton rb = (RadioButton) group.findViewById(checkedId);
                     if (null != rb && checkedId > -1) {
 
-                        switch (rb.getId()){
+                        switch (rb.getId()) {
 
                             case R.id.radioFast:
                                 mAnimOption = FAST;
@@ -108,14 +107,18 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-        }
 
-        @Override
-        protected void onPause() {
-            super.onPause();
 
-            // Save the settings here
-            mEditor.commit();
-        }
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Save the settings here
+        mEditor.commit();
+    }
+}
+
+

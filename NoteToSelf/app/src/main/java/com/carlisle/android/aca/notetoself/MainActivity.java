@@ -74,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
         mAnimOption = mPrefs.getInt("anim option", SettingsActivity.FAST);
     }
 
-}
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu)
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
 
     }
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         private JSONSerializer mSerializer;
         List<Note> noteList = new ArrayList<Note>();
 
-        public NoteAdapter(){
+        public NoteAdapter() {
 
             mSerializer = new JSONSerializer("NoteToSelf.json",
                     MainActivity.this.getApplicationContext());
@@ -148,19 +148,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int whichItem, View view, ViewGroup viewGroup)   {
+        public View getView(int whichItem, View view, ViewGroup viewGroup) {
 
             // Implement this method next
 
             // Has view been inflated already
-            if(view == null){
+            if (view == null) {
 
                 // If not, do so here
                 // First create a LayoutInflater
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 // Now instantiate view using inflater.inflate
                 // using the listitem layout
-                view = inflater.inflate(R.layout.listitem, viewGroup,false);
+                view = inflater.inflate(R.layout.listitem, viewGroup, false);
                 // The false parameter is neccessary
                 // because of the way that we want to use listitem
 
@@ -176,15 +176,15 @@ public class MainActivity extends AppCompatActivity {
             // Hide any ImageView widgets that are not relevant
             Note tempNote = noteList.get(whichItem);
 
-            if (!tempNote.isImportant()){
+            if (!tempNote.isImportant()) {
                 ivImportant.setVisibility(View.GONE);
             }
 
-            if (!tempNote.isTodo()){
+            if (!tempNote.isTodo()) {
                 ivTodo.setVisibility(View.GONE);
             }
 
-            if (!tempNote.isIdea()){
+            if (!tempNote.isIdea()) {
                 ivIdea.setVisibility(View.GONE);
             }
 
@@ -196,22 +196,23 @@ public class MainActivity extends AppCompatActivity {
             return view;
         }
 
-        public void addNote(Note n){
+        public void addNote(Note n) {
             noteList.add(n);
             notifyDataSetChanged();
 
         }
 
-        public void saveNotes(){
-            try{
+        public void saveNotes() {
+            try {
                 mSerializer.save(noteList);
 
-            }catch(Exception e){
-                Log.e("Error Saving Notes","", e);
+            } catch (Exception e) {
+                Log.e("Error Saving Notes", "", e);
             }
 
 
         }
+    }
 
         @Override
         protected void onPause(){
@@ -221,9 +222,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
-
-    }
-    }
+}
 
 
