@@ -46,7 +46,7 @@ public class CaptureFragment extends Fragment {
 
         //Inflate the layout file then get all necessary references
         View view = inflater.inflate(R.layout.fragment_capture, container, false);
-
+-
 
         mImageView = (ImageView)view.findViewById(R.id.imageView);
         Button btnCapture = (Button)view.findViewById(R.id.btnCapture);

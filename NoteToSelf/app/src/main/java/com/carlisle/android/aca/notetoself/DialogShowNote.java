@@ -34,9 +34,9 @@ public class DialogShowNote extends DialogFragment {
         txtDescription.setText(mNote.getDescription());
 
         ImageView ivImportant = (ImageView) dialogView.findViewById(R.id.imageViewImportant);
-
         ImageView ivTodo = (ImageView) dialogView.findViewById(R.id.imageViewTodo);
         ImageView ivIdea = (ImageView) dialogView.findViewById(R.id.imageViewIdea);
+        ImageView imageView2 = (ImageView) dialogView.findViewById(R.id.imageView2);
 
         if (!mNote.isImportant()){
             ivImportant.setVisibility(View.GONE);
