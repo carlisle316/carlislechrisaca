@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +29,8 @@ import java.util.Date;
 public class CaptureFragment extends Fragment {
     private static final int CAMERA_REQUEST = 123;
     private ImageView mImageView;
+    // A reference to our database
+    private DataManager mDataManager;
 
     // The filepath for the photo
     String mCurrentPhotoPath;
@@ -38,6 +41,9 @@ public class CaptureFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        mDataManager =
+                new DataManager(getActivity()
+                        .getApplicationContext());
 
     }
 
@@ -46,7 +52,6 @@ public class CaptureFragment extends Fragment {
 
         //Inflate the layout file then get all necessary references
         View view = inflater.inflate(R.layout.fragment_capture, container, false);
--
 
         mImageView = (ImageView)view.findViewById(R.id.imageView);
         Button btnCapture = (Button)view.findViewById(R.id.btnCapture);
@@ -85,6 +90,44 @@ public class CaptureFragment extends Fragment {
 
             }
         });
+        // Listen for clicks on the save button
+        btnSave.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(mImageUri != null){
+                    if(!mImageUri.equals(Uri.EMPTY)) {
+                        // We have a photo to save
+
+                        Photo photo = new Photo();
+                        photo.setTitle(mEditTextTitle.getText().toString());
+                        photo.setStorageLocation(mImageUri);
+
+                        // What is in the tags
+                        String tag1 = mEditTextTag1.getText().toString();
+                        String tag2 = mEditTextTag2.getText().toString();
+                        String tag3 = mEditTextTag3.getText().toString();
+
+                        // Assign the strings to the Photo object
+                        photo.setTag1(tag1);
+                        photo.setTag2(tag2);
+                        photo.setTag3(tag3);
+
+                        // Send the new object to our DataManager
+                        mDataManager.addPhoto(photo);
+                        Toast.makeText(getActivity(), "Saved", Toast.LENGTH_LONG).show();
+                    }else {
+                        // No image
+                        Toast.makeText(getActivity(), "No image to save", Toast.LENGTH_LONG).show();
+                    }
+                }else {
+                    // Uri not initialized
+                    Log.e("Error ", "uri is null");
+                }
+
+            }
+        });
+
 
         return view;
     }

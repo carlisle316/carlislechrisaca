@@ -23,8 +23,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static android.R.attr.data;
-
 /**
  * Created by chriscarlisle on 9/15/16.
  */
@@ -32,6 +30,7 @@ public class DialogNewNote extends DialogFragment {
     private static final int CAMERA_REQUEST = 123;
     private ImageView mImageView;
     private Uri mImageUri = Uri.EMPTY;
+    String mCurrentPhotoPath;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -42,7 +41,7 @@ public class DialogNewNote extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_new_note, null);
 
-        final EditText editTitle = (EditText) dialogView.findViewById(R.id.editText);
+        final EditText editTitle = (EditText) dialogView.findViewById(R.id.editTitle);
         final EditText editDescription = (EditText) dialogView.findViewById(R.id.editDescription);
         final CheckBox checkBoxIdea = (CheckBox) dialogView.findViewById(R.id.checkBoxIdea);
         final CheckBox checkBoxTodo = (CheckBox) dialogView.findViewById(R.id.checkBoxTodo);
@@ -50,7 +49,7 @@ public class DialogNewNote extends DialogFragment {
         Button btnCancel = (Button) dialogView.findViewById(R.id.btnCancel);
         Button btnOK = (Button) dialogView.findViewById(R.id.btnOk);
         Button btnCapture = (Button) dialogView.findViewById(R.id.btnCapture);
-        ImageView imageView = (ImageView) dialogView.findViewById(R.id.imageView);
+        final ImageView imageView = (ImageView) dialogView.findViewById(R.id.imageView);
 
         builder.setView(dialogView).setMessage("Add a new note");
 
@@ -75,6 +74,7 @@ public class DialogNewNote extends DialogFragment {
                 newNote.setIdea(checkBoxIdea.isChecked());
                 newNote.setTodo(checkBoxTodo.isChecked());
                 newNote.setImportant(checkBoxImportant.isChecked());
+                newNote.setPhoto(mImageUri);
 
                 // Get a reference to MainActivity
                 MainActivity callingActivity = (MainActivity) getActivity();
@@ -135,9 +135,7 @@ public class DialogNewNote extends DialogFragment {
         File storageDir = Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES);
         File image = File.createTempFile(
-                imageFileName
-                ".jpg"
-                storageDir
+                imageFileName, ".jpg", storageDir
         );
         mCurrentPhotoPath = "file:" + image.getAbsolutePath();
         return image;
