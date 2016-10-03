@@ -47,7 +47,7 @@ public class DialogNewNote extends DialogFragment {
         final CheckBox checkBoxTodo = (CheckBox) dialogView.findViewById(R.id.checkBoxTodo);
         final CheckBox checkBoxImportant = (CheckBox) dialogView.findViewById(R.id.checkBoxImportant);
         Button btnCancel = (Button) dialogView.findViewById(R.id.btnCancel);
-        Button btnOK = (Button) dialogView.findViewById(R.id.btnOk);
+        Button btnOK = (Button) dialogView.findViewById(R.id.btnOK);
         Button btnCapture = (Button) dialogView.findViewById(R.id.btnCapture);
         final ImageView imageView = (ImageView) dialogView.findViewById(R.id.imageView);
 
