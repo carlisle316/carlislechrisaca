@@ -1,0 +1,7 @@
+#Fri Sep 30 11:26:49 CDT 2016
+base.0=/Users/chriscarlisle/Desktop/carlislechrisaca/SimpleMap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9cea5960a2517a04deb29f658bc5bfbc01d7be7c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/chriscarlisle/Desktop/carlislechrisaca/SimpleMap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_67a4d839d84af72ce9a4799f84a7ccb2cd5cef4c/classes.dex
+base.1=/Users/chriscarlisle/Desktop/carlislechrisaca/SimpleMap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_67a4d839d84af72ce9a4799f84a7ccb2cd5cef4c
+file.0=/Users/chriscarlisle/Desktop/carlislechrisaca/SimpleMap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9cea5960a2517a04deb29f658bc5bfbc01d7be7c/classes.dex

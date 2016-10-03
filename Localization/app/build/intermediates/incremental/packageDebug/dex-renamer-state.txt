@@ -1,0 +1,7 @@
+#Mon Oct 03 10:27:16 CDT 2016
+base.0=/Users/chriscarlisle/Desktop/carlislechrisaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_90db393d61cab56cac13a5d5d307b1220d82b4f8
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/chriscarlisle/Desktop/carlislechrisaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6addfe8bdb537add4a8d2592593bdacdb5fb6698/classes.dex
+base.1=/Users/chriscarlisle/Desktop/carlislechrisaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6addfe8bdb537add4a8d2592593bdacdb5fb6698
+file.0=/Users/chriscarlisle/Desktop/carlislechrisaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_90db393d61cab56cac13a5d5d307b1220d82b4f8/classes.dex
