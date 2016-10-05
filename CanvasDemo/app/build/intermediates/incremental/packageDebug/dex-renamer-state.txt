@@ -1,0 +1,7 @@
+#Tue Oct 04 09:35:22 CDT 2016
+base.0=/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0a3ea24031713f62e6f95cc25444a6d4d3bbecb3
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c675e3a88a2a2a009208931040cad3d3386af1c8/classes.dex
+base.1=/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c675e3a88a2a2a009208931040cad3d3386af1c8
+file.0=/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0a3ea24031713f62e6f95cc25444a6d4d3bbecb3/classes.dex
