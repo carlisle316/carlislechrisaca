@@ -18,6 +18,10 @@
             android:name="com.carlisle.android.aca.pong.MainActivity"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.carlisle.android.aca.pong.TapToPlay"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

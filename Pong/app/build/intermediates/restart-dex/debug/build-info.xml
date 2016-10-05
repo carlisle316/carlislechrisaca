@@ -4,7 +4,7 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="201755443410425"
+    timestamp="221996562845641"
     token="5175341211768241219"
     verifier="MANIFEST_FILE_CHANGE" >
 
@@ -26,7 +26,7 @@
         type="MAIN" />
 
     <build
-        timestamp="201755443410425"
+        timestamp="221996562845641"
         verifier="MANIFEST_FILE_CHANGE" >
         <artifact
             location="/Users/chriscarlisle/Desktop/carlislechrisaca/Pong/app/build/outputs/apk/app-debug.apk"

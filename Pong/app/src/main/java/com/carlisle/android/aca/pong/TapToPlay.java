@@ -19,7 +19,8 @@ public class TapToPlay extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent
+                Intent i = new Intent(TapToPlay.this, MainActivity.class);
+                startActivity(i);
 
             }
         });
