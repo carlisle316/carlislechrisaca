@@ -1,6 +1,9 @@
 package com.carlisle.android.aca.pong;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Canvas;
@@ -11,6 +14,7 @@ import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -24,6 +28,8 @@ import java.io.IOException;
     // Notice we implement runnable so we have
 // A thread and can override the run method.
     class GameView extends SurfaceView implements Runnable {
+
+    Context mContext;
 
     // This is our thread
     Thread mGameThread = null;
@@ -69,6 +75,8 @@ import java.io.IOException;
 
     // Lives
     int mLives = 3;
+
+    Handler mHandler;
 /*
   When we call new() on gameView
   This custom constructor runs
@@ -81,6 +89,9 @@ import java.io.IOException;
     SurfaceView class to set up our object.
   */
         super(context);
+
+        mContext = context;
+        mHandler = new Handler();
 
         // Set the screen width and height
         mScreenX = x;
@@ -141,12 +152,11 @@ import java.io.IOException;
             Log.e("error", "failed to load sound files");
         }
 
-        setupAndRestart();
+        setup();
 
     }
 
-    public void setupAndRestart() {
-
+    public void setup() {
         // Put the mBall back to the start
         mBall.reset(mScreenX, mScreenY);
 
@@ -155,6 +165,40 @@ import java.io.IOException;
             mScore = 0;
             mLives = 3;
         }
+    }
+
+    public void setupAndRestart() {
+
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        GameView.this.getContext() );
+                // set title
+                alertDialogBuilder.setTitle("Game Over");
+                // set Dialog message
+                alertDialogBuilder
+                        .setMessage("Play Again?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                setup();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i = new Intent(mContext, TapToPlay.class);
+                                mContext.startActivity(i);
+
+                            }
+                        })
+                        .create()
+                        .show();
+
+            }
+        });
 
     }
 

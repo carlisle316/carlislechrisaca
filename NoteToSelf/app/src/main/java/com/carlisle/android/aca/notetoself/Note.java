@@ -1,5 +1,7 @@
 package com.carlisle.android.aca.notetoself;
 
+import android.net.Uri;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -13,12 +15,15 @@ public class Note {
     private boolean mIdea;
     private boolean mTodo;
     private boolean mImportant;
+    private Uri mPhoto;
 
     private static final String JSON_TITLE = "title";
     private static final String JSON_DESCRIPTION = "description";
     private static final String JSON_IDEA = "idea" ;
     private static final String JSON_TODO = "todo";
     private static final String JSON_IMPORTANT = "important";
+
+
 
     // Constructor
 // Only used when new is called with a JSONObject
@@ -29,6 +34,8 @@ public class Note {
         mIdea = jo.getBoolean(JSON_IDEA);
         mTodo = jo.getBoolean(JSON_TODO);
         mImportant = jo.getBoolean(JSON_IMPORTANT);
+
+
     }
     // Now we must provide an empty default constructor
 // for when we create a Note as we provide a
@@ -75,6 +82,13 @@ public class Note {
 
     public void setImportant(boolean mImportant) {
         this.mImportant = mImportant;
+    }
+    public Uri getPhoto() {
+        return mPhoto;
+    }
+
+    public void setPhoto(Uri photo) {
+        this.mPhoto = photo;
     }
 
     public JSONObject convertToJSON() throws JSONException{

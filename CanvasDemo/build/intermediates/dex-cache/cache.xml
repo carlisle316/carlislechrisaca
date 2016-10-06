@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_35a21dc143d45970b81d07f47b15d8cc9cc49e8d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_5e34b9c4e05c61dcb9c4d51e03cb68ff78bb83e9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_7484a2149bde02e3451d010d02c519e53b302b94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_467a314c4d691d6143ff2713de59ca95a775d07e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_5b422488dee86a7d452031f19adfd0b65e0aac67/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_aa92ecaff39c7e857125e5aa2466e6e18dae2558/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_9d8791c2013a6f6a504d8841d0badf0c4e2383ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_5a3ff9cdeaeb1360334f0231e0bf4f04cd9947d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_5efa3bedecd8fedf0b30879a0e8fe620fcc09e68/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="33650dc8c3eb8c0aa10e02108dbbb39dac693f64">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c675e3a88a2a2a009208931040cad3d3386af1c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_681692311ee9fe377a68318ba15d0e3d0335a27c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_4f24121bbb49dc672d76612550c602d4ff3b868c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_4be3a91f0870cd60398758d49e81547e953cd2ab/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_4a11907507a9eb22de7d7bc3089cab6c3c306a17/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_261799cd52c1024f51d542234c9ec9ac1d6b53da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_5b3c5415cb70f31dddbee877da99bfad7bec663b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="29865a6b0e73af6f32ca16a8ce95618b33705120">
+        <dex dex="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0a3ea24031713f62e6f95cc25444a6d4d3bbecb3/classes.dex" />
+    </item>
+
+</items>

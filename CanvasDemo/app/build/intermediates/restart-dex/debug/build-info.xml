@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="23"
+    density="420dpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="188012080191471"
+    token="-6618785031474968417"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="278" />
+    <task
+        name="instant-run-dex"
+        duration="25" />
+    <task
+        name="instant-run-transform"
+        duration="77" />
+    <task
+        name="verifier"
+        duration="2" />
+
+    <artifact
+        location="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="187691691437084"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="187961375779387"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/builds/debug/187961375779387/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="188012080191471"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/chriscarlisle/Desktop/carlislechrisaca/CanvasDemo/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>

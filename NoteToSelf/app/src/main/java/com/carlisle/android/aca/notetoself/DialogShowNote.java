@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class DialogShowNote extends DialogFragment {
 
     private Note mNote;
+    ImageView imageView2;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -30,11 +31,13 @@ public class DialogShowNote extends DialogFragment {
 
         TextView txtDescription = (TextView) dialogView.findViewById(R.id.txtDescription);
 
+        ImageView imageView2 = (ImageView) dialogView.findViewById(R.id.imageView2);
+
         txtTitle.setText(mNote.getTitle());
         txtDescription.setText(mNote.getDescription());
+        imageView2.setImageURI(mNote.getPhoto());
 
         ImageView ivImportant = (ImageView) dialogView.findViewById(R.id.imageViewImportant);
-
         ImageView ivTodo = (ImageView) dialogView.findViewById(R.id.imageViewTodo);
         ImageView ivIdea = (ImageView) dialogView.findViewById(R.id.imageViewIdea);
 
