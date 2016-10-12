@@ -1,7 +1,0 @@
-#Fri Sep 30 10:56:27 CDT 2016
-base.0=/Users/chriscarlisle/Desktop/carlislechrisaca/Whereintheworld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_01028f9e75c1d5880d8dc7d6080bfb6bb2bf85ce
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/Users/chriscarlisle/Desktop/carlislechrisaca/Whereintheworld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b1508cb2adbb554645ba3e0c9ba63f8a19f54380/classes.dex
-base.1=/Users/chriscarlisle/Desktop/carlislechrisaca/Whereintheworld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b1508cb2adbb554645ba3e0c9ba63f8a19f54380
-file.0=/Users/chriscarlisle/Desktop/carlislechrisaca/Whereintheworld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_01028f9e75c1d5880d8dc7d6080bfb6bb2bf85ce/classes.dex
