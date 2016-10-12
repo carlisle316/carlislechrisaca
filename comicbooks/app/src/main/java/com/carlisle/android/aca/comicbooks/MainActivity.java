@@ -1,8 +1,7 @@
 package com.carlisle.android.aca.comicbooks;
 
-import android.support.annotation.FloatRange;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     Comic[] comix = new Comic[4];
 
-    HashMap quality = new HashMap();
+    HashMap quality;
 
     EditText mtitle;
     EditText mcondition;
@@ -35,21 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mValue = (TextView) findViewById(R.id.outputText);
         mcalculate = (Button) findViewById(R.id.calculate);
 
-        mcalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String getTitle = mtitle.getText().toString();
-                String getCondition = mcondition.getText().toString();
-                String getIssueNumber = missueNumber.getText().toString();
-                Float getBasePrice = Float.parseFloat (mbasePrice.getText().toString());
-
-                comix[3] = new Comic(getTitle, getCondition, getIssueNumber, getBasePrice);
-                comix[3].setPrice( (Float) quality.get(comix[3].condition));
-
-            }
-        });
-
-        HashMap quality = new HashMap();
+        quality = new HashMap();
 
         float price1 = 3.00F;
         quality.put("mint", price1);
@@ -69,23 +54,35 @@ public class MainActivity extends AppCompatActivity {
         float price6 = 0.25F;
         quality.put("poor", price6);
 
+        mcalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String getTitle = mtitle.getText().toString();
+                String getCondition = mcondition.getText().toString();
+                String getIssueNumber = missueNumber.getText().toString();
+                Float getBasePrice = Float.parseFloat (mbasePrice.getText().toString());
 
-        // Add comics to the collection
-        comix[0] = new Comic("Amazing Spider-Man", "1A", "very fine", 12_000.00F);
-        comix[0].setPrice( (Float) quality.get(comix[0].condition));
+                // Add comics to the collection
+                comix[0] = new Comic("Amazing Spider-Man", "1A", "very fine", 12_000.00F);
+                comix[0].setPrice( (Float) quality.get(comix[0].condition));
 
-        comix[1] = new Comic("The Incredible Hulk", "181", "near mint", 680.00F);
-        comix[1].setPrice( (Float) quality.get(comix[1].condition));
+                comix[1] = new Comic("The Incredible Hulk", "181", "near mint", 680.00F);
+                comix[1].setPrice( (Float) quality.get(comix[1].condition));
 
-        comix[2] = new Comic("Cerebus", "1A", "good", 190.00F);
-        comix[2].setPrice( (Float) quality.get(comix[2].condition));
+                comix[2] = new Comic("Cerebus", "1A", "good", 190.00F);
+                comix[2].setPrice( (Float) quality.get(comix[2].condition));
 
-        for (int i = 0; i < comix.length; i++) {
-            System.out.println("Title: " + comix[i].title);
-            System.out.println("Issue: " + comix[i].issueNumber);
-            System.out.println("Condition: " + comix[i].condition);
-            System.out.println("Price: $" + comix[i].price + "\n");
-        }
+                comix[3] = new Comic(getTitle, getCondition, getIssueNumber, getBasePrice);
+                comix[3].setPrice( (Float) quality.get(comix[3].condition));
+
+                for (int i = 0; i < comix.length; i++) {
+                    System.out.println("Title: " + comix[i].title);
+                    System.out.println("Issue: " + comix[i].issueNumber);
+                    System.out.println("Condition: " + comix[i].condition);
+                    System.out.println("Price: $" + comix[i].price + "\n");
+                }
+            }
+        });
     }
 
     class Comic {
