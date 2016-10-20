@@ -2,13 +2,14 @@ package com.carlisle.android.aca.filmsearch;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by chriscarlisle on 10/17/16.
  */
 
-public class Movie {
+public class Movie implements Serializable{
     public static final String TMDB_IMAGE_PATH ="http://image.tmdb.org/t/p/w500";
 
     private String mTitle;

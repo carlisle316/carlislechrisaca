@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private MoviesAdapter mAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                    @Override
                    public void onItemClick(View view, int position) {
                        Intent intent = new Intent(getApplicationContext(), MovieDetail.class);
-                       intent.putExtra("Movie", mAdapter.getMovieList().get(position ));
+                       intent.putExtra("Movie", mAdapter.getMovieList().get(position));
                        startActivity(intent);
 
                    }
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                    @Override
                    public void onItemLongClick(View view, int position) {
                        Intent intent = new Intent(getApplicationContext(), MovieDetail.class);
-                       intent.putExtra("Movie" mAdapter.getMovieList().get(position));
+                       intent.putExtra("Movie", mAdapter.getMovieList().get(position));
                        startActivity(intent);
 
                    }

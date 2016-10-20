@@ -3,9 +3,10 @@ package com.carlisle.android.aca.filmsearch;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class MovieDetail extends AppCompatActivity {
 
@@ -28,7 +29,16 @@ public class MovieDetail extends AppCompatActivity {
         txtDescription = (TextView) findViewById(R.id.txtDescription);
         imgBackdrop = (ImageView) findViewById(R.id.imgBackdrop);
 
-        txtTitle.setText(getTitle(MoviesAdapter));
+        txtTitle.setText(mMovie.getTitle());
+        txtDescription.setText(mMovie.getDescription());
+        Picasso.with(this)
+                .load(mMovie.getBackdrop())
+                .placeholder(R.color.colorAccent)
+                .into(imgBackdrop);
+
+
+
+
 
     }
 }
