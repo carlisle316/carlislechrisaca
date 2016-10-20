@@ -12,8 +12,8 @@ import java.util.List;
 public class Movie implements Serializable{
     public static final String TMDB_IMAGE_PATH ="http://image.tmdb.org/t/p/w500";
 
+    @SerializedName("title")
     private String mTitle;
-
     @SerializedName("poster_path")
     private String mPoster;
     @SerializedName("overview")
@@ -21,7 +21,7 @@ public class Movie implements Serializable{
     @SerializedName("backdrop_path")
     private String mBackdrop;
 
-    public String getTitle() {
+    public String getMovieTitle() {
         return mTitle;
     }
 

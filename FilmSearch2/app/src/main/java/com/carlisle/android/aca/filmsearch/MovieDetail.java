@@ -29,7 +29,7 @@ public class MovieDetail extends AppCompatActivity {
         txtDescription = (TextView) findViewById(R.id.txtDescription);
         imgBackdrop = (ImageView) findViewById(R.id.imgBackdrop);
 
-        txtTitle.setText(mMovie.getTitle());
+        txtTitle.setText(mMovie.getMovieTitle());
         txtDescription.setText(mMovie.getDescription());
         Picasso.with(this)
                 .load(mMovie.getBackdrop())
