@@ -6,7 +6,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/relativeLayout"
     tools:context="com.carlisle.android.aca.myfunfacts.FunFactsActivity"
     android:background="#51b46d">
 
@@ -20,13 +20,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ants stretch when they wake up!"
         android:id="@+id/factTextView"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="24sp"
-        android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+        android:textColor="@android:color/background_light" />
 
     <Button
         android:layout_width="match_parent"
@@ -35,5 +34,6 @@
         android:id="@+id/showFactButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#ffffff" />
+        android:backgroundTint="#ffffff"
+        android:textColor="#51b46d"/>
 </RelativeLayout>
